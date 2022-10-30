@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<body>
+
+<h1>Income Tax Calculator</h1>
+
+<p>
+<label for="Bastax">Enter tax:</label> 
+<input id="Bastax" name="Bastax" type="number">
+<button onclick="ComputeNetTaxable()">Compute</button>
+</p>
+ 
+
+<script>
+function ComputeNetTaxable()
+{
+      var a; 
+      a=Number(document.getElementById("Bastax").value);
+      
+    if (a<250000)
+        {
+        let z= 0+(a-0)*0;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }
+   else if (a>=250000 && a<=400000)  
+        {
+        let z= 250000+(a-0)*0.20;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')
+        }
+   else if (a>=400000 && a<= 800000)
+        {
+         let z= 30000+(a-400000)*0.25;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        } 
+   else if (a>=800000 && a<=2000000)
+        {
+        let z= 130000+(a-800000)*0.30;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+  else if (a>=2000000 && a<=8000000)
+        {
+        let z= 490000+(a-2000000)*0.32;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+  else 
+        {
+        let z=  2410000+(a-8000000)*0.35;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+}  
+</script>
+</body>
+
+</head>
+</html>
