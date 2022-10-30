@@ -1,6 +1,43 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
+<title>Income Tax Table</title>
+<h1>Income Tax Table Guide</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>Texable Income per Year</th>
+    <th>Income Tax Rate</th>
+  
+  </tr>
+  <tr>
+    <td> &#8369 250,000 and Below</td>
+    <td> 0%</td>
+  </tr>
+   <tr>
+    <td>Above  &#8369 250,000 to  &#8369 400,000</td>
+    <td>20% of the excess over  &#8369 250,000</td>
+  </tr>
+   <tr>
+    <td>Above  &#8369 400,000 to  &#8369 800,000</td>
+    <td> &#8369 30,000 + 25% of the excess over &#8369 400,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 800,000 to &#8369 2,000,000</td>
+    <td>&#8369 130,000 + 30% of the excess over &#8369 800,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 2,000,000 to &#8369 8,000,000</td>
+    <td>&#8369 490,000 + 32% of the excess over &#8369 2,000,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 8,000,000</td>
+    <td>&#8369 2,410,000 + 35% of the excess over &#8369 8,000,000</td>
+  </tr>
+
+</table>
+</body>
+
 <body>
 
 <h1>Income Tax Calculator</h1>
