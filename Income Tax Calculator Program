@@ -1,13 +1,14 @@
 <!DOCTYPE html> 
-<html> 
+<html lang="en"> 
 <head> 
 <title>Income Tax Table</title>
 <h1>Income Tax Table Guide</h1>
 
 <table style="width:100%">
+  <caption></caption>
   <tr>
-    <th>Texable Income per Year</th>
-    <th>Income Tax Rate</th>
+    <th scope="col">Texable Income per Year</th>
+    <th scope="col">Income Tax Rate</th>
   
   </tr>
   <tr>
