@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+</head>
+<body>
+    <label><h1>N Factorial (While Loop)</h1></label>
+    <label>The factorial of </label>
+    <input type="numbers" id="num" placeholder="Enter a number" oninput="factorial()"> is <strong><span id="factor"></span></strong>
+
+    <script>
+        function factorial(){
+            var num = parseInt(document.getElementById("num").value);
+            var count = num;
+
+            while(count > 1){
+                count--;
+                num = num * count;
+            }
+            document.getElementById("factor").innerHTML= num;
+        }
+    </script>
+
+    <label><h1>Sum of the First Number (Do While Loop)</h1></label>
+    <label>The sum of the first number</label>
+    <input type="number" id="number" placeholder="Enter a Digit here" oninput="Sum()"> is equals <strong><span id="first"></span></strong>
+
+    <script>
+        function Sum(){
+            var number = parseInt(document.getElementById("number").value);
+            var count = number;
+
+            do{
+                count--;
+                number = number + count;
+            } 
+            while(count > 0){
+                document.getElementById("first").innerHTML = number;
+            }
+        }
+    </script>
+
+    <label><h1>Average of the First N number (For Loop)</h1></label>
+    <label>The average</label>
+    <input type="numbers" id="number1" oninput="solve()"> is equals to <strong><span id="average"></span></strong>
+
+    <script>
+        function solve(){
+            var int = parseInt(document.getElementById("number1").value);
+            var total = 0;
+
+            for (let i = 1; i <= int; i++) {
+            total = parseInt(total + i); 
+            }
+            total = parseFloat(total / int)
+            document.getElementById("average").innerHTML=total;
+        }
+    </script>
+</body>
+</html>
