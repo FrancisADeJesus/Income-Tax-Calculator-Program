@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Simple Payroll</title>
+    <style>
+        body.p{
+            font-family: arial;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+        .container{
+            width: 500px;
+            clear: both;
+        }
+        .container.input{
+            width: 100%;
+            clear: both;
+        }
+    </style>
+    <div class="container">
+        <body>
+            <h3> Payroll Program in JavaScript </h3>
+            <br/>Employee's Name
+            <input type="text" id="emp_name" name="emp_name">
+            <br>
+            <br/> Daily Rate
+            <input type="text" id="daily_rate" name="daily_rate">
+            <br>
+            <br/> Number of Days Work
+            <input type="text" id="no_days_work" name="no_days_work">
+            <br>
+            <br>
+            <button onclick="solve_salary()">Solve Salary</button>
+            <br><br>
+            <p id="demo"></p>
+            <p id="demo2"></p>
+            
+            <script>
+                function solve_salary(){
+                    var emp_name = document.getElementById("emp_name").value;
+                    var daily_rate = document.getElementById("daily_rate").value;
+                    var no_days_work = document.getElementById("no_days_work").value;
+
+                    gross_pay = parseFloat(daily_rate) * no_days_work;
+                    results = "Employee's Name: " + emp_name + ".";
+                    results2 ="Basic Salary  : Php " + gross_pay.toFixed(2) + ".";
+
+                    document.getElementById("demo").innerHTML = results;
+                    document.getElementById("demo2").innerHTML = results2;
+                }
+            </script>
+        </body>
+    </div>
+</html>
