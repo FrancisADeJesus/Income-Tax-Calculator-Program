@@ -1,0 +1,358 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<title>Income Tax Table</title>
+<h1>Income Tax Table Guide</h1>
+
+<table style="width:100%">
+  <caption></caption>
+  <tr>
+    <th scope="col">Texable Income per Year</th>
+    <th scope="col">Income Tax Rate</th>
+  
+  </tr>
+  <tr>
+    <td> &#8369 250,000 and Below</td>
+    <td> 0%</td>
+  </tr>
+   <tr>
+    <td>Above  &#8369 250,000 to  &#8369 400,000</td>
+    <td>20% of the excess over  &#8369 250,000</td>
+  </tr>
+   <tr>
+    <td>Above  &#8369 400,000 to  &#8369 800,000</td>
+    <td> &#8369 30,000 + 25% of the excess over &#8369 400,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 800,000 to &#8369 2,000,000</td>
+    <td>&#8369 130,000 + 30% of the excess over &#8369 800,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 2,000,000 to &#8369 8,000,000</td>
+    <td>&#8369 490,000 + 32% of the excess over &#8369 2,000,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 8,000,000</td>
+    <td>&#8369 2,410,000 + 35% of the excess over &#8369 8,000,000</td>
+  </tr>
+
+</table>
+</body>
+
+<body>
+
+<h1>Income Tax Calculator</h1>
+
+<p>
+<label for="Bastax">Enter tax:</label> 
+<input id="Bastax" name="Bastax" type="number">
+<button onclick="ComputeNetTaxable()">Compute</button>
+</p>
+ 
+
+<script>
+function ComputeNetTaxable()
+{
+      var a; 
+      a=Number(document.getElementById("Bastax").value);
+      
+    if (a<250000)
+        {
+        let z= 0+(a-0)*0;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }
+   else if (a>=250000 && a<=400000)  
+        {
+        let z= 250000+(a-0)*0.20;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')
+        }
+   else if (a>=400000 && a<= 800000)
+        {
+         let z= 30000+(a-400000)*0.25;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        } 
+   else if (a>=800000 && a<=2000000)
+        {
+        let z= 130000+(a-800000)*0.30;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+  else if (a>=2000000 && a<=8000000)
+        {
+        let z= 490000+(a-2000000)*0.32;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+  else 
+        {
+        let z=  2410000+(a-8000000)*0.35;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+}  
+</script>
+</body>
+<body>
+    <label><h1>N Factorial (While Loop)</h1></label>
+    <label>The factorial of </label>
+    <input type="numbers" id="num" placeholder="Enter a number" oninput="factorial()"> is <strong><span id="factor"></span></strong>
+
+    <script>
+        function factorial(){
+            var num = parseInt(document.getElementById("num").value);
+            var count = num;
+
+            while(count > 1){
+                count--;
+                num = num * count;
+            }
+            document.getElementById("factor").innerHTML= num;
+        }
+    </script>
+
+    <label><h1>Sum of the First Number (Do While Loop)</h1></label>
+    <label>The sum of the first number</label>
+    <input type="number" id="number" placeholder="Enter a Digit here" oninput="Sum()"> is equals <strong><span id="first"></span></strong>
+
+    <script>
+        function Sum(){
+            var number = parseInt(document.getElementById("number").value);
+            var count = number;
+
+            do{
+                count--;
+                number = number + count;
+            } 
+            while(count > 0){
+                document.getElementById("first").innerHTML = number;
+            }
+        }
+    </script>
+
+    <label><h1>Average of the First N number (For Loop)</h1></label>
+    <label>The average</label>
+    <input type="numbers" id="number1" oninput="solve()"> is equals to <strong><span id="average"></span></strong>
+
+    <script>
+        function solve(){
+            var int = parseInt(document.getElementById("number1").value);
+            var total = 0;
+
+            for (let i = 1; i <= int; i++) {
+            total = parseInt(total + i); 
+            }
+            total = parseFloat(total / int)
+            document.getElementById("average").innerHTML=total;
+        }
+    </script>
+</body>
+<body>
+    
+    <h1>Choose what to Convert</h1>
+    whether:
+
+    <button id="myBtn" type="button" onclick="function0()">Celsius to Fahrenheit</button>
+    <button id="myBtn1" type="button" onclick="function1()">Fahrenheit to Celsius</button>
+    <button id="myBtn2" type="button" onclick="function2()">Meters to Feet</button>
+    <button id="myBtn3" type="button" onclick="function3()">Feet to Meters</button>
+
+    <script>
+        function function0(){
+            const temperature = prompt("Enter Celsius");
+
+            temp = (temperature * 1.8) + 32;
+
+            document.body.innerHTML = "<h4>The Fahrenheit is: " + temp + "ºF</h4>";
+        }
+        function function1(){
+            const temperature = prompt("Enter Fahrenheit");
+
+            temp = (temperature - 32) / 1.8;
+
+            document.body.innerHTML = "<h4>The Celsius is: " + temp + "ºC</h4";
+        }
+        function function2(){
+            const meters = prompt("Enter Meters");
+
+            feet = meters * 3.2808;
+
+            document.body.innerHTML = "<h4>The Feet is: " + feet + " ft</h4>";
+        }
+        function function3(){
+            const feet = prompt("Enter feet");
+
+            meter = feet / 3.2808;
+
+            document.body.innerHTML = "<h4>The Meter is: " + meter + " m</h4>";
+        }
+
+    </script>
+</body>
+<head>
+    <title>Simple Payroll</title>
+</head>
+<style>
+    body.p{
+        font-family: arial;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .container{
+        width: 500px;
+        clear: both;
+    }
+    .container.input{
+        width: 100%;
+        clear: both;
+    }
+</style>
+<h1> Employee's Payroll </h1> 
+<div class = "payroll">
+    <body onload = "initializecart()">
+        <p>
+            <h3>Simple Payroll</h3>
+            <br>
+            <label for="name">Employee Name:</label>  
+            <input id="itemdesc" name="itemdesc"></input>
+            <br>
+            <label for="qty">Days Work:</label>
+            <input id="qty" name="qty" type="number" oninput="computeamount()"></input>
+            <br>
+            <label for="price">Daily Rate:</label>
+            <input id="price" name="price" type="number" oninput="computeamount()"></input>
+            <br>
+            <label for="amount">Deduction Amount:</label>
+            <input id="amount" name="amount" type="number" oninput="computeamount()"></input>
+            <br>
+            <br>
+            <button onclick="addtocart()">Solve Salary</button>
+        </p>
+        <p>
+            <label for="items">Number of Employee/s:</label>
+            <input id="items" name="items" type="number" readonly></input>
+            <button onclick="clearcart()">Clear Cart</button>
+            <br>
+            <label for="delitem">Delete Employee/s:</label>
+            <input id="delitem" name="delitem" type="number" ></input>
+            <button onclick="deleteitem()">Delete</button>  
+        </p>
+        <p id="cart"></p>
+    </body>
+</div>
+<script>
+    function initcart(){
+        cart=[];
+        document.getElementById("items").value = cart.length;
+        document.getElementById("cart").innerHTML = "";        
+    }
+
+    function clearcart(){
+        var toclear;
+        
+        toclear=confirm("Delete all item(s) from cart ?");
+        
+        if (toclear) {
+              initcart();
+        }          
+    }
+
+    function addtocart(){ 
+        var cartitem = {
+            "item": "1",
+            "price": 0,
+            "qty": 1,
+            "amount": 0,
+            "itemamount" : function itemamount(){
+                return Math.round(this.price*this.qty*100)/100;  
+            },
+            "netpay" : function netpay(){
+                return Math.round(this.price*this.qty*100)/100-this.amount;  
+            }
+        };
+                    
+        cartitem.item=document.getElementById("itemdesc").value;
+        cartitem.qty=document.getElementById("qty").value;
+        cartitem.price=document.getElementById("price").value;
+        cartitem.amount=document.getElementById("amount").value;
+                 
+        
+        console.log(cartitem.item);
+        console.log(cartitem.qty);
+        console.log(cartitem.price);
+        console.log(cartitem.amount);
+                 
+            
+        
+        cart.push(cartitem);
+        
+        console.log(cart.length);
+        document.getElementById("items").value = cart.length;
+        
+        showcart();
+    }
+            
+    function deleteitem(){
+        var todelete;
+        var itemno;
+        
+        itemno = document.getElementById("delitem").value;
+        
+        todelete=confirm("Are you sure you want to remove item number " + itemno + "?");
+        
+        if (todelete) {
+            cart.splice(itemno-1,1);
+            document.getElementById("items").value = cart.length;
+            showcart();
+        }
+    }
+        
+    function showcart(){
+        var i,l,carttext,totalamount,ln;
+        var theader,tbody,tb,tfooter;
+        
+        theader ="<thead>";
+        theader+="<tr>";
+        theader+="<th>No.</th>";
+        theader+='<th style="text-align:left" >Employee Name</th>';
+        theader+="<th>Days Worked</th>";
+        theader+='<th style="text-align:right">Daily Rate</th>';
+        theader+="<th>Gross Pay</th>";
+        theader+="<th>Deduction Amount</th>";
+        theader+="<th>Net Pay</th>";
+        theader+="</tr>";
+        theader+="</thead>";
+                
+
+        l = cart.length;
+              
+                
+        for (i=0,totalamount=0,carttext="",tbody='';i<l;i++){
+            ln=i+1;
+            tbody += "<tr>"
+                +'<td>'+ln+' </td>'
+                +'<td>'+cart[i].item+' </td>'
+                +'<td style="text-align:right">' + cart[i].qty + '</td>'
+                +'<td style="text-align:right">' + cart[i].price + '</td>'
+                +'<td style="text-align:right">' + cart[i].itemamount() + '</td>'  
+                +'<td style="text-align:right">' + cart[i].amount + '</td>'  
+                +'<td style="text-align:right">' + cart[i].netpay() + '</td>' 		
+                +"</tr>";
+                }
+        
+                tfooter ="<tfoot>";
+                tfooter+="<tr>";
+                tfooter+='<th></th>';
+                tfooter+='<th style="text-align:left"></th>';
+                tfooter+='<th></th>';
+                tfooter+='<th></th>';
+                tfooter+='<th></th>';
+                tfooter+='<th></th>';
+                tfooter+='<th></th>';
+                tfooter+="</tr>";
+                tfooter+="</tfoot>";
+            
+                console.log(theader+tbody+tfooter);
+                    document.getElementById("cart").innerHTML=
+                    '<table>'+theader+tbody+tfooter+'</table>';
+    }
+    var cart = [];
+</script>
+</head>
+</html>
